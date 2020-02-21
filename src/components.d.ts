@@ -13,20 +13,6 @@ export namespace Components {
         "formatter": (item: any) => string;
         "items": Array<any>;
     }
-    interface MyComponent {
-        /**
-          * The first name
-         */
-        "first": string;
-        /**
-          * The last name
-         */
-        "last": string;
-        /**
-          * The middle name
-         */
-        "middle": string;
-    }
 }
 declare global {
     interface HTMLMfButtonElement extends Components.MfButton, HTMLStencilElement {
@@ -41,16 +27,9 @@ declare global {
         prototype: HTMLMfListElement;
         new (): HTMLMfListElement;
     };
-    interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {
-    }
-    var HTMLMyComponentElement: {
-        prototype: HTMLMyComponentElement;
-        new (): HTMLMyComponentElement;
-    };
     interface HTMLElementTagNameMap {
         "mf-button": HTMLMfButtonElement;
         "mf-list": HTMLMfListElement;
-        "my-component": HTMLMyComponentElement;
     }
 }
 declare namespace LocalJSX {
@@ -63,24 +42,9 @@ declare namespace LocalJSX {
         "items"?: Array<any>;
         "onOutClickedItem"?: (event: CustomEvent<any>) => void;
     }
-    interface MyComponent {
-        /**
-          * The first name
-         */
-        "first"?: string;
-        /**
-          * The last name
-         */
-        "last"?: string;
-        /**
-          * The middle name
-         */
-        "middle"?: string;
-    }
     interface IntrinsicElements {
         "mf-button": MfButton;
         "mf-list": MfList;
-        "my-component": MyComponent;
     }
 }
 export { LocalJSX as JSX };
@@ -89,7 +53,6 @@ declare module "@stencil/core" {
         interface IntrinsicElements {
             "mf-button": LocalJSX.MfButton & JSXBase.HTMLAttributes<HTMLMfButtonElement>;
             "mf-list": LocalJSX.MfList & JSXBase.HTMLAttributes<HTMLMfListElement>;
-            "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
         }
     }
 }

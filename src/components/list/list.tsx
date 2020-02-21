@@ -12,7 +12,6 @@ export class List {
   @Event() public outClickedItem: EventEmitter;
 
   render() {
-    console.log('HIER', this.items);
     return (
       <Host>
         <ul>

@@ -21,7 +21,6 @@ export class Button {
   }
 
   private handleClick(): void {
-    console.log('clicked the button');
     this.outClick.emit();
   }
 }
