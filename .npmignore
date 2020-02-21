@@ -1,0 +1,7 @@
+.editorconfig
+.gitignore
+.prettierrc
+LICENSE
+loader
+node_modules
+src

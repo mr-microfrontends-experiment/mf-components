@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0" />
+    <title>Stencil Component Starter</title>
+
+    <script type="module" src="/build/mf-components.esm.js"></script>
+    <script nomodule src="/build/mf-components.js"></script>
+  </head>
+  <body>
+    <div>
+      <h1>Buttons</h1>
+
+      <mf-button></mf-button>
+      <mf-button>with custom label</mf-button>
+      <mf-button disabled="true">i am disabled</mf-button>
+      <mf-button id="clickable" disabled="false">Click me please!</mf-button>
+    </div>
+
+    <div>
+      <h1>Lists</h1>
+
+      <mf-list id="list"></mf-list>
+    </div>
+
+    <script>
+      document.querySelector('#clickable').addEventListener('outClick', event => {
+        alert('CLICKED!!!!');
+        console.log(event);
+      });
+
+      const list = document.querySelector('#list');
+
+      list.formatter = item => `${item.name} <${item.email}>`;
+      list.items = [
+        { name: 'Person 1', email: 'person1@earth.com' },
+        { name: 'Person 2', email: 'person2@earth.com' },
+        { name: 'Person 3', email: 'person3@earth.com' },
+        { name: 'Person 4', email: 'person4@earth.com' },
+        { name: 'Person 5', email: 'person5@earth.com' },
+        { name: 'Person 6', email: 'person6@earth.com' },
+        { name: 'Person 7', email: 'person7@earth.com' },
+      ];
+
+      list.addEventListener('outClickedItem', event => {
+        console.log(event.detail, 'clicked');
+      });
+    </script>
+  </body>
+</html>
