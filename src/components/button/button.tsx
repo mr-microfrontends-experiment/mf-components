@@ -14,7 +14,7 @@ export class Button {
     return (
       <Host>
         <button class="button" type="button" disabled={this.disabled} onClick={this.handleClick.bind(this)}>
-          <slot>Click me!</slot>
+          <slot>Default label</slot>
         </button>
       </Host>
     );
