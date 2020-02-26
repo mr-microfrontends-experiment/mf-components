@@ -1,6 +1,6 @@
 {
   "name": "mf-components",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "author": "Marc Remolt <mremolt@de.alten.com>",
   "description": "Just an experiment publishing web components",
   "main": "dist/index.js",

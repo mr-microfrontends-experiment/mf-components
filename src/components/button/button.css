@@ -3,7 +3,7 @@
 }
 
 button {
-  background-color: #008cba;
+  background-color: var(--theme-primary, #008cba);
   border: none;
   color: white;
   padding: 15px 32px;
@@ -11,6 +11,7 @@ button {
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
+  cursor: pointer;
 }
 
 button[disabled] {
