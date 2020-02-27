@@ -3,7 +3,7 @@
 }
 
 button {
-  background-color: var(--theme-primary, #008cba);
+  background-color: var(--theme-primary, #62ce41);
   border: none;
   color: white;
   padding: 15px 32px;
